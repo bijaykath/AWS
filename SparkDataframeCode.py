@@ -4,7 +4,7 @@ Setting up history server in local machine:
 --------------------------------------------------------------------------------------------
 1. Set up the following configuration parameter in spark-defaults.conf (present in SPARK_HOME/conf)
 spark.eventLog.enabled             true
-spark.eventLog.dir                 file:///Users/............/HDD_Soumyadeep/TECHNICAL/SparkBinaries/SparkHistoryLog
+spark.eventLog.dir                 file:///Users/............/............../TECHNICAL/SparkBinaries/SparkHistoryLog
 spark.history.fs.logDirectory      file:///Users/......./........../TECHNICAL/SparkBinaries/SparkHistoryLog
 
 2. Start history server using script present in SPARK_HOME/sbin/start-history-server.sh
@@ -19,7 +19,7 @@ Setting up PyCharm so that PySpark application that is executed here is visible 
 1. Go to "Run"
 2. Go to "Edit Configurations"
 3. Set up the following "Environment Variables"
-   SPARK_HOME = /Users/......./HDD_Soumyadeep/TECHNICAL/SparkBinaries/SparkBinary/spark-3.4.2-bin-hadoop3
+   SPARK_HOME = /Users/......./HDD_............/TECHNICAL/SparkBinaries/SparkBinary/spark-3.4.2-bin-hadoop3
    PYTHON_PATH = $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9.7-src.zip
 --------------------------------------------------------------------------------------------
 '''
@@ -33,7 +33,7 @@ spark.conf.set("spark.sql.autoBroadcastJoinThreshold", -1)
 # df1 = spark.read.format('csv'). \
 #     option('header','true').\
 #     option('inferSchema','true').\
-#     load('/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Prepzee/SparkHandsOn/Dataset/Electric_Vehicle_Population_Data.csv')
+#     load('/Users/........./HDD_........../TECHNICAL/Training/Prepzee/SparkHandsOn/Dataset/Electric_Vehicle_Population_Data.csv')
 #
 # # print(df1.rdd.getNumPartitions())
 #
@@ -47,10 +47,10 @@ spark.conf.set("spark.sql.autoBroadcastJoinThreshold", -1)
 # # df12.show()
 #
 # df2.write.format('parquet').\
-#     save('/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Prepzee/SparkHandsOn/Dataset/ev_population_parquet')
+#     save('/Users/........./HDD_........../TECHNICAL/Training/Prepzee/SparkHandsOn/Dataset/ev_population_parquet')
 
 # df_parquet = spark.read.format('parquet').\
-#     load('/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Prepzee/SparkHandsOn/Dataset/ev_population_parquet')
+#     load('/Users/........../HDD_........../TECHNICAL/Training/Prepzee/SparkHandsOn/Dataset/ev_population_parquet')
 #
 # df_parquet.printSchema()
 
@@ -64,7 +64,7 @@ spark.conf.set("spark.sql.autoBroadcastJoinThreshold", -1)
 df1 = spark.read.format('csv'). \
        option('inferSchema', 'true').\
         option('header', 'true').\
-    load('/Users/......../HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_customers_dataset.csv')
+    load('/Users/......../HDD_........../TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_customers_dataset.csv')
 
 df1.createOrReplaceTempView('customer')
 # df1.write.saveAsTable('customer')
@@ -87,7 +87,7 @@ df1.createOrReplaceTempView('customer')
 df2 = spark.read.format('csv'). \
     option('inferSchema', 'true'). \
     option('header', 'true'). \
-    load('/Users/........./HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_orders_dataset.csv')
+    load('/Users/........./HDD_.........../TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_orders_dataset.csv')
 
 df2.createOrReplaceTempView('order')
 
@@ -118,7 +118,7 @@ schema = StructType([
 
 # df3 = spark.read.format('csv'). \
 #     schema(schema).\
-#     load('/Users/........./HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_order_items_dataset.csv')
+#     load('/Users/........./HDD_............./TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_order_items_dataset.csv')
 
 # Narrow transformation - no shuffle - no exchange
 # df3.select('product_id','price').where('price > 50.00').show()
