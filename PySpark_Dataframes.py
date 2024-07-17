@@ -61,18 +61,18 @@ write modes = "append" | "overwrite" | "errorIfExists" | "ignore"
 '''
 #-----------------------------------------------------------------------------------------------
 # ss = SparkSession.builder.appName('intellipaat-sparksession').master('local').getOrCreate()
-# input_file_csv = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_ORIG.csv'
-# input_file_csv = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_wo_header.csv'
+# input_file_csv = '/Users/......../........../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_ORIG.csv'
+# input_file_csv = '/Users/........./............./TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_wo_header.csv'
 # df1 = ss.read.format('csv').option('header','true').load(input_file_csv)
 # df1.show()
 
-# input_file_parquet = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/covid-19_patients_data.parquet/part-00000-cffc2fa1-1dd0-4b68-8005-e08f9806ee19-c000.snappy.parquet'
+# input_file_parquet = '/Users/........./HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/covid-19_patients_data.parquet/part-00000-cffc2fa1-1dd0-4b68-8005-e08f9806ee19-c000.snappy.parquet'
 # df1 = ss.read.format('parquet').load(input_file_parquet) # No need to provide any schema
 # df1.printSchema()
 # df1.show()
 
-# input_file_json = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/car_sales_information.json'
-# input_file_json = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/restaurants.json'
+# input_file_json = '/Users/........../............/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/car_sales_information.json'
+# input_file_json = '/Users/........../.........../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/restaurants.json'
 # df1 = ss.read.format('json').option('inferSchema','true').load(input_file_json)
 # df1.show()
 # df1.printSchema()
@@ -109,8 +109,8 @@ To check the schema use printSchema().
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType, ArrayType, FloatType
 
 
-# input_restaurant_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/restaurants.json'
-# input_emp_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_ORIG.csv'
+# input_restaurant_file = '/Users/........../........../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/restaurants.json'
+# input_emp_file = '/Users/.........../.............../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_ORIG.csv'
 
 # emp_data_ORIGmp_schema = StructType(
 #     [
@@ -175,7 +175,7 @@ Convert RDD to Dataframe
 '''
 #-----------------------------------------------------------------------------------------------
 from pyspark.sql.types import StringType, StructField, StructType, IntegerType
-# input_file_csv = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data.csv'
+# input_file_csv = '/Users/........../.............../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data.csv'
 # ss = SparkSession.builder.appName('PySpark-DataFrame').master('local').getOrCreate()
 #
 # from pyspark import SparkContext, SparkConf
@@ -217,7 +217,7 @@ from pyspark.sql.types import StringType, StructField, StructType, IntegerType
 #-----------------------------------------------------------------------------------------------
 from pyspark.sql.functions import col, column
 
-# input_jpmc_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
+# input_jpmc_file = '/Users/........../............./TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
 # df1 = ss.read.format('csv').option('header','true').load(input_jpmc_file)
 
 # df1.show()
@@ -247,7 +247,7 @@ DataFrame Transformations
 - agg
 '''
 #-----------------------------------------------------------------------------------------------
-# input_jpmc_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
+# input_jpmc_file = '/Users/.........../............../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
 # df1 = ss.read.format('csv').option('header','true').load(input_jpmc_file)
 
 # df1.printSchema()
@@ -288,8 +288,8 @@ join(DataFrame, <list of col names | single col | a join expression>,
                 <'inner|cross|left_outer|right_outer|outer|left_semi|right_semi|left_anti'>)
 '''
 #---------------------------------------------------------------------------------------------------------
-# emp_data_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_ORIG.csv'
-# dept_data_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/dept_data.csv'
+# emp_data_file = '/Users/............/........../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/emp_data_ORIG.csv'
+# dept_data_file = '/Users/........../............/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/dept_data.csv'
 # empDf = ss.read.format('csv').option('header','true').load(emp_data_file)
 # deptDf = ss.read.format('csv').option('header','true').load(dept_data_file)
 
@@ -312,8 +312,8 @@ join(DataFrame, <list of col names | single col | a join expression>,
 # joined_data.show()
 
 ## 4. Note: join using multiple columns >>>
-# inspection = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/inspections_plus.csv'
-# violations = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/violations_plus.csv'
+# inspection = '/Users/........./............./TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/inspections_plus.csv'
+# violations = '/Users/............../................./TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/violations_plus.csv'
 #
 # from pyspark.sql.types import StructField, StructType
 # from pyspark.sql.types import StringType, IntegerType
@@ -394,7 +394,7 @@ How to see EXPLAIN PLAN
 #---------------------------------------------------------------------------------------------------------
 from pyspark.sql.functions import max, min,sum,avg, col, countDistinct, count
 from pyspark.sql.types import DecimalType, IntegerType
-# bank_data = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
+# bank_data = '/Users/......../.............../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
 # bankDf = ss.read.format('csv').option('header','true').load(bank_data)
 # bankDf.printSchema()
 
@@ -422,7 +422,7 @@ from pyspark.sql.types import DecimalType, IntegerType
 
 
 ## Practice Questions: Solve the business problems mentioned
-# bankfile = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
+# bankfile = '/Users/............../.............../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/JPMC_Bank_Database.csv'
 # bankDf = ss.read.format('csv').option('header','true').load(bankfile)
 
 #?? QNS 1 >>> Find the oldest banks among the lot
@@ -463,7 +463,7 @@ from pyspark.sql.functions import lit, to_date, to_timestamp, min
 
 
 # using car sales dataset
-# car_sales_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/car_sales_information.json'
+# car_sales_file = '/Users/........../.............../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/car_sales_information.json'
 # carDf = ss.read.format('json').option('inferSchema','true').load(car_sales_file)
 # carDf.printSchema()
 
@@ -530,7 +530,7 @@ Partitioning in DataFrames:
 Note: Can be mentioned while writing DataFrames to files too.
 '''
 #-----------------------------------------------------------------------------------------------
-# car_file = '/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/car_sales_data.json'
+# car_file = '/Users/........./.........../TECHNICAL/Training/Intellipaat/PySparkCodes/sampledata/car_sales_data.json'
 # df = ss.read.format('json').option('inferSchema','true').load(car_file)
 # print(df.rdd.getNumPartitions())
 
