@@ -4,8 +4,8 @@ Setting up history server in local machine:
 --------------------------------------------------------------------------------------------
 1. Set up the following configuration parameter in spark-defaults.conf (present in SPARK_HOME/conf)
 spark.eventLog.enabled             true
-spark.eventLog.dir                 file:///Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/SparkBinaries/SparkHistoryLog
-spark.history.fs.logDirectory      file:///Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/SparkBinaries/SparkHistoryLog
+spark.eventLog.dir                 file:///Users/............/HDD_Soumyadeep/TECHNICAL/SparkBinaries/SparkHistoryLog
+spark.history.fs.logDirectory      file:///Users/......./........../TECHNICAL/SparkBinaries/SparkHistoryLog
 
 2. Start history server using script present in SPARK_HOME/sbin/start-history-server.sh
 3. History server is available in localhost:18080
@@ -19,7 +19,7 @@ Setting up PyCharm so that PySpark application that is executed here is visible 
 1. Go to "Run"
 2. Go to "Edit Configurations"
 3. Set up the following "Environment Variables"
-   SPARK_HOME = /Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/SparkBinaries/SparkBinary/spark-3.4.2-bin-hadoop3
+   SPARK_HOME = /Users/......./HDD_Soumyadeep/TECHNICAL/SparkBinaries/SparkBinary/spark-3.4.2-bin-hadoop3
    PYTHON_PATH = $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9.7-src.zip
 --------------------------------------------------------------------------------------------
 '''
@@ -64,7 +64,7 @@ spark.conf.set("spark.sql.autoBroadcastJoinThreshold", -1)
 df1 = spark.read.format('csv'). \
        option('inferSchema', 'true').\
         option('header', 'true').\
-    load('/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_customers_dataset.csv')
+    load('/Users/......../HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_customers_dataset.csv')
 
 df1.createOrReplaceTempView('customer')
 # df1.write.saveAsTable('customer')
@@ -87,7 +87,7 @@ df1.createOrReplaceTempView('customer')
 df2 = spark.read.format('csv'). \
     option('inferSchema', 'true'). \
     option('header', 'true'). \
-    load('/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_orders_dataset.csv')
+    load('/Users/........./HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_orders_dataset.csv')
 
 df2.createOrReplaceTempView('order')
 
@@ -118,7 +118,7 @@ schema = StructType([
 
 # df3 = spark.read.format('csv'). \
 #     schema(schema).\
-#     load('/Users/soumyadeepdey/HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_order_items_dataset.csv')
+#     load('/Users/........./HDD_Soumyadeep/TECHNICAL/Training/Prepzee/LoadingDataSampleFiles/olist_order_items_dataset.csv')
 
 # Narrow transformation - no shuffle - no exchange
 # df3.select('product_id','price').where('price > 50.00').show()
